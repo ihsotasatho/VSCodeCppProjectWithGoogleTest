@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "clang++ build active file",
+            "command": "clang++",
+            "args": [
+                "-g",
+                "-fdebug-macro",
+                "-std=c++17",
+                "-stdlib=libc++",
+                "src/sample.cpp",
+                "src/main.cpp",
+                "-lpq",
+                "-v",
+                "-o",
+                "sample"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "test - clang++ build active file",
+            "command": "clang++",
+            "args": [
+                "-I",
+                "${HOME}/.local/include",
+                "-g",
+                "-fdebug-macro",
+                "-std=c++17",
+                "-stdlib=libc++",
+                "-L",
+                "${HOME}/.local/lib",
+                "-l",
+                "gtest",
+                "src/sample.cpp",
+                "test/main.cpp",
+                "-lpq",
+                "-v",
+                "-o",
+                "test_sample"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}
