@@ -2,7 +2,7 @@
 
 Implementation date : 14 July 2019<br>
 
-This is a sample of Visual Studio Code Project (Folder) for user who are editing C++ code on Mac.
+This is a sample of Visual Studio Code Project (Folder) for user who is editing C++ code on Mac.
 
 ## Precondition
 1. Visual Studio Code is installed on your MAC(*1).
